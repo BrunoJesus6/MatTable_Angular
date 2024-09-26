@@ -93,12 +93,10 @@ export class MatTableComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngOnInit() {
-    // Inicializando o dataSource com os dados
     this.dataSource = new MatTableDataSource<Cidade>(DADOS);
   }
 
   ngAfterViewInit() {
-    // Associando o paginator após a inicialização da view
     this.dataSource.paginator = this.paginator;
   }
 
